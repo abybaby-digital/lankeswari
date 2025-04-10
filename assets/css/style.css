@@ -42,7 +42,8 @@
 ==============================================  */
 /* Default  */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root {
   --color-primary: #FF3600;
   --color-secondary: #1F1F25;
@@ -117,7 +118,7 @@ body {
   line-height: var(--line-height-b1);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Inter", sans-serif;
+  font-family: "Outfit", sans-serif;
   color: var(--color-body);
   font-weight: var(--p-regular);
   position: relative;
