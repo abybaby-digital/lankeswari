@@ -40,7 +40,7 @@
       rtsJs.stickyHeader();
       rtsJs.backToTopInit();
       rtsJs.sideMenu();
-      rtsJs.niceSelect();
+      // rtsJs.niceSelect();
       rtsJs.vedioActivation();
       rtsJs.videoActive();
       rtsJs.menuCurrentLink();
@@ -628,67 +628,67 @@
         $("#anywhere-home").removeClass("bgshow");
       });
     },
-    niceSelect: function () {
-      (function ($) {
-        $.fn.niceSelect = function (method) {
-          if (typeof method === 'string') {
-            return this.each(function () {
-              var $select = $(this), $dropdown = $select.next('.nice-select');
-              if (method === 'update') {
-                if ($dropdown.length) $dropdown.remove();
-                createNiceSelect($select);
-              } else if (method === 'destroy') {
-                if ($dropdown.length) $dropdown.remove();
-                $select.show();
-              }
-            });
-          }
+    // niceSelect: function () {
+    //   (function ($) {
+    //     $.fn.niceSelect = function (method) {
+    //       if (typeof method === 'string') {
+    //         return this.each(function () {
+    //           var $select = $(this), $dropdown = $select.next('.nice-select');
+    //           if (method === 'update') {
+    //             if ($dropdown.length) $dropdown.remove();
+    //             createNiceSelect($select);
+    //           } else if (method === 'destroy') {
+    //             if ($dropdown.length) $dropdown.remove();
+    //             $select.show();
+    //           }
+    //         });
+    //       }
 
-          this.hide().each(function () {
-            if (!$(this).next().hasClass('nice-select')) createNiceSelect($(this));
-          });
+    //       this.hide().each(function () {
+    //         if (!$(this).next().hasClass('nice-select')) createNiceSelect($(this));
+    //       });
 
-          function createNiceSelect($select) {
-            var $dropdown = $('<div class="nice-select" tabindex="0">' +
-              '<span class="current"></span><ul class="list"></ul></div>');
-            $select.after($dropdown);
+    //       function createNiceSelect($select) {
+    //         var $dropdown = $('<div class="nice-select" tabindex="0">' +
+    //           '<span class="current"></span><ul class="list"></ul></div>');
+    //         $select.after($dropdown);
 
-            $select.find('option').each(function () {
-              var $option = $(this);
-              $('<li class="option" data-value="' + $option.val() + '">' +
-                $option.text() + '</li>')
-                .toggleClass('selected', $option.is(':selected'))
-                .toggleClass('disabled', $option.is(':disabled'))
-                .appendTo($dropdown.find('.list'));
-            });
+    //         $select.find('option').each(function () {
+    //           var $option = $(this);
+    //           $('<li class="option" data-value="' + $option.val() + '">' +
+    //             $option.text() + '</li>')
+    //             .toggleClass('selected', $option.is(':selected'))
+    //             .toggleClass('disabled', $option.is(':disabled'))
+    //             .appendTo($dropdown.find('.list'));
+    //         });
 
-            $dropdown.find('.current').text($select.find('option:selected').text());
-          }
+    //         $dropdown.find('.current').text($select.find('option:selected').text());
+    //       }
 
-          $(document).off('.nice_select')
-            .on('click.nice_select', '.nice-select', function () {
-              $('.nice-select').not(this).removeClass('open');
-              $(this).toggleClass('open');
-            })
-            .on('click.nice_select', function (e) {
-              if (!$(e.target).closest('.nice-select').length) $('.nice-select').removeClass('open');
-            })
-            .on('click.nice_select', '.nice-select .option:not(.disabled)', function () {
-              var $option = $(this), $dropdown = $option.closest('.nice-select');
-              $dropdown.find('.selected').removeClass('selected');
-              $option.addClass('selected');
-              $dropdown.find('.current').text($option.text());
-              $dropdown.prev('select').val($option.data('value')).trigger('change');
-            });
+    //       $(document).off('.nice_select')
+    //         .on('click.nice_select', '.nice-select', function () {
+    //           $('.nice-select').not(this).removeClass('open');
+    //           $(this).toggleClass('open');
+    //         })
+    //         .on('click.nice_select', function (e) {
+    //           if (!$(e.target).closest('.nice-select').length) $('.nice-select').removeClass('open');
+    //         })
+    //         .on('click.nice_select', '.nice-select .option:not(.disabled)', function () {
+    //           var $option = $(this), $dropdown = $option.closest('.nice-select');
+    //           $dropdown.find('.selected').removeClass('selected');
+    //           $option.addClass('selected');
+    //           $dropdown.find('.current').text($option.text());
+    //           $dropdown.prev('select').val($option.data('value')).trigger('change');
+    //         });
 
-          return this;
-        };
+    //       return this;
+    //     };
 
-        $(document).ready(function () {
-          $('select').niceSelect();
-        });
-      }(jQuery));
-    },
+    //     $(document).ready(function () {
+    //       $('select').niceSelect();
+    //     });
+    //   }(jQuery));
+    // },
     vedioActivation: function () {
       $(document).ready(function () {
         $('.popup-youtube, .popup-video').magnificPopup({
