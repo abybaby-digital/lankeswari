@@ -14596,6 +14596,27 @@ li.main-nav:hover .main-menu {
   margin: 0 auto;
 }
 
+.feedback-form input,
+.feedback-form select {
+  background: transparent;
+  border: 1px dashed white !important;
+  height: 45px;
+  color: white;
+  border-radius: 15px;
+  padding: 0 10px;
+}
+
+.feedback-form textarea {
+  background: transparent;
+  padding: 10px;
+  color: white;
+  border: 1px dashed white !important;
+}
+
+.feedback-form textarea:focus {
+  border: 1px dashed white !important;
+}
+
 
 .enquiry-form input,
 .enquiry-form select {
@@ -16889,7 +16910,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .cta-inner img.shape.two {
   bottom: 20%;
-  right: 35%;
+  right: 80%;
 }
 
 .rts-cta-area.area-2 .cta-inner {
@@ -18129,7 +18150,12 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   padding-top: 209px;
   text-align: end;
   position: relative;
+  border-radius: 25px;
   z-index: 1;
+}
+
+.rts-about-area .about-image-area img {
+  border-radius: 25px;
 }
 
 .rts-about-area .about-image-area .image-main .counter-area {
@@ -25292,7 +25318,7 @@ li.has-dropdown:hover .submenu {
 }
 
 .footer-bg-1 {
-  background: url(../images/footer/footer-bg.webp);
+  background: url(../images/cars/footer.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
